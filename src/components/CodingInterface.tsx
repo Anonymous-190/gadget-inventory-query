@@ -1,6 +1,7 @@
 import { Panel, PanelGroup, PanelResizeHandle } from "react-resizable-panels";
 import ProblemStatement from "./ProblemStatement";
 import CodeEditor from "./CodeEditor";
+import Navbar from "./Navbar";
 
 interface CodingInterfaceProps {
   problem: {
@@ -15,8 +16,9 @@ interface CodingInterfaceProps {
 
 const CodingInterface = ({ problem, solution }: CodingInterfaceProps) => {
   return (
-    <div className="h-screen bg-background">
-      <div className="h-full">
+    <div className="h-screen bg-background flex flex-col">
+      <Navbar />
+      <div className="flex-1">
         <PanelGroup direction="horizontal">
           <Panel defaultSize={50} minSize={30}>
             <ProblemStatement 
