@@ -19,7 +19,7 @@ const CodingInterface = ({ problem, solution }: CodingInterfaceProps) => {
     <div className="h-screen bg-background flex flex-col">
       <Navbar />
       <div className="flex-1">
-        <PanelGroup direction="horizontal" className="hidden md:flex">
+        <PanelGroup direction="horizontal" className="md:flex hidden">
           <Panel defaultSize={50} minSize={30}>
             <ProblemStatement 
               title={problem.title}
@@ -37,7 +37,6 @@ const CodingInterface = ({ problem, solution }: CodingInterfaceProps) => {
           </Panel>
         </PanelGroup>
         
-        {/* Mobile layout - vertical stack */}
         <PanelGroup direction="vertical" className="flex md:hidden">
           <Panel defaultSize={40} minSize={25}>
             <ProblemStatement 
