@@ -6,7 +6,7 @@ const Navbar = () => {
   const navItems = [
     { id: 1, path: "/", label: "Question 1 - Gadget" },
     { id: 2, path: "/question2", label: "Question 2 - Art Gallery" },
-    { id: 3, path: "/question3", label: "Question 3 - Coming Soon" },
+    { id: 3, path: "/question3", label: "Question 3 - Vehicle" },
   ];
 
   return (
