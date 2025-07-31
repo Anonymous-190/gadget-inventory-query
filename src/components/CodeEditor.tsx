@@ -17,8 +17,8 @@ const CodeEditor = ({ code, language }: CodeEditorProps) => {
         </div>
       </div>
       <div className="h-[calc(100%-57px)] overflow-auto">
-        <pre className="p-4 text-sm text-foreground font-mono leading-relaxed">
-          <code className="language-java">{code}</code>
+        <pre className="p-3 md:p-4 text-xs md:text-sm text-foreground font-mono leading-relaxed">
+          <code className="language-java break-words">{code}</code>
         </pre>
       </div>
     </div>

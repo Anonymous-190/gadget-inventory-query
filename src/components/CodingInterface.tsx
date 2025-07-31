@@ -19,7 +19,7 @@ const CodingInterface = ({ problem, solution }: CodingInterfaceProps) => {
     <div className="h-screen bg-background flex flex-col">
       <Navbar />
       <div className="flex-1">
-        <PanelGroup direction="horizontal">
+        <PanelGroup direction="horizontal" className="hidden md:flex">
           <Panel defaultSize={50} minSize={30}>
             <ProblemStatement 
               title={problem.title}
@@ -30,6 +30,25 @@ const CodingInterface = ({ problem, solution }: CodingInterfaceProps) => {
           <PanelResizeHandle className="w-1 bg-panel-border hover:bg-primary transition-colors cursor-col-resize" />
           
           <Panel defaultSize={50} minSize={30}>
+            <CodeEditor 
+              code={solution.code}
+              language={solution.language}
+            />
+          </Panel>
+        </PanelGroup>
+        
+        {/* Mobile layout - vertical stack */}
+        <PanelGroup direction="vertical" className="flex md:hidden">
+          <Panel defaultSize={40} minSize={25}>
+            <ProblemStatement 
+              title={problem.title}
+              description={problem.description}
+            />
+          </Panel>
+          
+          <PanelResizeHandle className="h-1 bg-panel-border hover:bg-primary transition-colors cursor-row-resize" />
+          
+          <Panel defaultSize={60} minSize={35}>
             <CodeEditor 
               code={solution.code}
               language={solution.language}
